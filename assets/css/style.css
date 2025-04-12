@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 :root {
-  --bg-color: #FFFFFF;
-  --black: #222222;
+  --bg-color: #FCFCFC;
+  --black: #1A1A1A;
   --secundColor: #2D4257;
 
   --marginDesktop: 20px;
@@ -88,7 +88,11 @@ header {
 }
 
 header *{
-  cursor: pointer;;
+  cursor: pointer;
+}
+
+#storeSvg{
+  stroke: var(--black)!important;
 }
 
 .headerDiv1-container {
@@ -97,7 +101,7 @@ header *{
 }
 
 .headerDiv2-container {
-  grid-column: 6 / span 7;
+  grid-column: 7 / span 6;
   margin: var(--marginDesktop) var(--marginDesktop) var(--marginDesktop) 0;
   align-self: center;
 }
@@ -115,7 +119,7 @@ header *{
 
 .buttonBlack a{
   text-decoration: none;
-  color: var(--white)
+  color: var(--bg-color)
 }
 
 .headerDiv1-container svg {
@@ -126,6 +130,12 @@ header hr {
   grid-column: 1 / span 12;
 }
 
+
+.buttonWhite svg {
+  stroke: var(--black);
+}
+
+
 .buttonBlack {
   display: flex;
   gap: 5px;
@@ -134,7 +144,7 @@ header hr {
   border: none;
   border-radius: 20px;
   background-color: var(--secundColor);
-  color: var(--bg-color);
+  color: var(--bg-color)!important;
 }
 
 .buttonWhite {
@@ -155,10 +165,10 @@ header hr {
 
 /*Index*/
 .heroIndex {
-  margin: var(--marginDesktop);
   aspect-ratio: 16/9;
   width: calc(100% - var(--marginDesktop) * 2);
   height: calc(100vh - (35px + var(--marginDesktop) * 4));
+  margin: var(--marginDesktop);
 }
 
 .heroIndex img{
@@ -490,6 +500,18 @@ form textarea{
   aspect-ratio: 4/3;
   background-color: grey;
   margin-bottom: var(--marginDesktop);
+}
+
+.imageAbout2 img{
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageAbout1 img{
+  width:100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .textAbout{
