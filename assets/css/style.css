@@ -206,6 +206,7 @@ header hr {
   position: absolute;
   bottom: var(--marginDesktop);
   right: 50%;
+  transform: translate(50%, 50%);
 }
 
 .circle {
@@ -720,15 +721,14 @@ footer{
   gap: 1rem;
 }
 
-header .buttonWhite{
-  margin-right: 2rem;
-}
+
 
 
 
 /*index*/
 .heroIndex {
-  height: calc(100vh - (35px + var(--marginDesktop) * 4) - 75px);
+  height: auto;
+  aspect-ratio: 4 / 4;
 }
 
 .headerDiv2-container {
