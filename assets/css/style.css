@@ -704,6 +704,11 @@ footer{
     stroke-width: 1px;
     display: flex;
     align-content: center;
+    order: 3;
+  }
+
+  #storeSvg{
+    order: 2;
   }
   
   .headerNav {
@@ -716,14 +721,26 @@ footer{
 }
 
 header .buttonWhite{
-  display: none;
+  margin-right: 2rem;
 }
 
+
+
 /*index*/
+.heroIndex {
+  height: calc(100vh - (35px + var(--marginDesktop) * 4) - 75px);
+}
+
+.headerDiv2-container {
+  grid-column: 5 / span 8;
+  margin: var(--marginDesktop) var(--marginDesktop) var(--marginDesktop) 0;
+  align-self: center;
+}
+
 .highlightIndex {
   grid-column: 1 / span 12;
-  margin-top: 25px;
-  margin-bottom: 150px;
+  margin-top: 0px;
+  margin-bottom: 100px;
 }
 
 .brandIndex-container .h2 {
