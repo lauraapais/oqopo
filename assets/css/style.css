@@ -781,6 +781,7 @@ footer{
 /*store*/
 .filter {
   grid-column: 1 / span 6;
+  margin-top:0;
 }
 
 .gridTemplate-line{
@@ -795,9 +796,30 @@ footer{
 
 
 .gridItem {
-  grid-column: span 6;
+  grid-column: span 12;
 }
 
+/*Contacts*/
+.contacts-half{
+  grid-column: span 12;
+}
+
+.contacts-all {
+  grid-column: span 12;
+  margin-top: 50px;
+}
+
+form {
+  width: 100%;
+}
+
+.contacts-all-p {
+  width: 100%;
+}
+
+.gridMarginBot {
+  margin-bottom: 100px;
+}
 
 /*Footer*/
 .footer-container1{
