@@ -821,6 +821,37 @@ form {
   margin-bottom: 100px;
 }
 
+/*oqopo*/
+.heroTitle > * {
+  grid-column: 1 / span 12;
+}
+
+.gridTemplate-lineHeader {
+  grid-column: 1 / span 12;
+  margin-bottom: 1rem;
+}
+
+.lineDescription {
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+.gridTemplate-line {
+  margin-bottom: 25px;
+}
+
+.gridTemplate {
+  margin-top: 50px;
+}
+
+.gridTemplate .filter{
+  margin-bottom:25px;
+}
+
+.gridTemplate-products{
+  grid-column: 1 / span 12;
+}
+
 /*Footer*/
 .footer-container1{
   grid-column: span 12;
