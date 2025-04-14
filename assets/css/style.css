@@ -195,16 +195,17 @@ header hr {
 
 /*Index*/
 .heroIndex {
-  aspect-ratio: 16/9;
-  width: calc(100% - var(--marginDesktop) * 2);
-  height: calc(100vh - (35px + var(--marginDesktop) * 4));
+  aspect-ratio: 16 / 9;
+    width: calc(100% - var(--marginDesktop) * 2);
+    height: calc(100vh - (35px + var(--marginDesktop) * 4));
   position: relative;
   overflow: hidden;
+  margin: var(--marginDesktop);
   
 }
 
 .slide{
-  margin: var(--marginDesktop);
+  
 }
 
 .heroIndex img{
