@@ -80,6 +80,10 @@ hr{
   border-top: 0.5px solid var(--black);
   }
 
+  main{
+    position: relative;
+  }
+
 /*Header*/
 header {
   margin: 0 !important;
@@ -166,6 +170,18 @@ header hr {
   border-radius: 20px;
 }
 
+.buttonWhiteBack{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--bg-color);
+  color: var(--black)!important;
+  width: max-content;
+}
+
 .buttonWhite svg {
   width: 13px;
   height: auto;
@@ -178,9 +194,13 @@ header hr {
   aspect-ratio: 16/9;
   width: calc(100% - var(--marginDesktop) * 2);
   height: calc(100vh - (35px + var(--marginDesktop) * 4));
-  margin: var(--marginDesktop);
   position: relative;
   overflow: hidden;
+  
+}
+
+.slide{
+  margin: var(--marginDesktop);
 }
 
 .heroIndex img{
@@ -298,7 +318,7 @@ header hr {
 .hero{
   height: 90vh;
   width: calc(100%);
-  background-color: grey;
+  position: relative;
 }
 
 .heroTitle > *{
@@ -360,6 +380,15 @@ header hr {
 .gridTemplate-lineHeader .h2{
   font-weight: bold;
   margin-bottom: 0.5rem;
+}
+
+.gridTemplate-products{
+  grid-column: 1 / span 9!important;
+  display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: calc(var(--marginDesktop));
+    margin: 0;
+    width: calc(100%);
 }
 
 .lineDescription{
@@ -476,7 +505,7 @@ header hr {
 .productInfo-moreinfo div{
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .productInfo-moreinfo div p{
@@ -570,13 +599,11 @@ form textarea{
 .imageAbout1{
   width:50%;
   aspect-ratio: 4/4;
-  background-color: grey;
 }
 
 .imageAbout2{  
   width:100%;
   aspect-ratio: 4/3;
-  background-color: grey;
   margin-bottom: var(--marginDesktop);
 }
 
@@ -654,6 +681,10 @@ form textarea{
   transform: rotate(180deg);
 }
 
+
+
+
+
 /*Footer*/
 footer hr{
   grid-column: 1 / span 12;
@@ -697,6 +728,22 @@ footer{
   font-style: normal;
   text-wrap: pretty;
 }
+
+p {
+  font-size: 16px;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-wrap: pretty;
+}
+
+.heroSpan {
+  font-size: 80px;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 2rem;
+}
   /*Header*/
   .mobileMenu{
     display: block;
@@ -722,6 +769,78 @@ footer{
 }
 
 
+/*Header*/
+.menuMobile {
+  height: calc(100vh - (35px + var(--marginDesktop) * 2));
+  background-color: var(--black);
+  position: fixed; /* Ensure it stays over the content */
+  top: -100vh; /* Start off-screen */
+  width: 100%;
+  z-index: 100;
+  transition: top 0.5s ease-in-out; /* Smooth sliding effect */
+}
+
+/* When menu is active */
+.menuMobile.active {
+  top: calc(35px + var(--marginDesktop) * 2); /* Slide down into view */
+}
+
+
+
+
+.menuMobile-nav .buttonWhiteBack{
+  width: max-content;
+    margin-top: calc(var(--marginDesktop) 2);
+    position: absolute;
+    bottom: calc(var(--marginDesktop) * 2);
+}
+
+.buttonWhiteBack{
+  width: max-content;
+    margin-top: calc(var(--marginDesktop) 2);
+    position: absolute;
+    bottom: calc(var(--marginDesktop) * 2);
+    
+}
+
+.menuMobile-nav .buttonWhiteBack p{
+  font-size: 20px!important;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-wrap: pretty;
+}
+
+.menuMobile-nav{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  gap: var(--marginDesktop);
+  justify-content: center;
+  margin: 0 var(--marginDesktop);
+}
+
+
+.menuMobile-nav a{
+  text-decoration: none;
+  color: var(--bg-color);
+}
+
+.menuMobile-nav p{
+  font-size: 25px;
+    font-family: "neue-haas-grotesk-text", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-wrap: pretty;
+    
+}
+
+header.menu-open {
+  background-color: var(--black); /* Change header background when menu is open */
+}
+
+#logo.menu-open {
+}
 
 
 
@@ -729,6 +848,7 @@ footer{
 .heroIndex {
   height: auto;
   aspect-ratio: 4 / 4;
+  width: calc(100% - var(--marginDesktop));
 }
 
 .headerDiv2-container {
@@ -739,7 +859,7 @@ footer{
 
 .highlightIndex {
   grid-column: 1 / span 12;
-  margin-top: 0px;
+  margin-top: var(--marginDesktop);
   margin-bottom: 100px;
 }
 
@@ -794,9 +914,57 @@ footer{
   width: calc(100%);
 }
 
+.gridTemplate-products{
+  grid-column: 1 / span 12!important;
+  display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: calc(var(--marginDesktop));
+    margin: 0;
+    width: calc(100%);
+    margin-bottom: 100px;
+}
+
 
 .gridItem {
   grid-column: span 12;
+}
+
+/*single*/
+.productImage {
+  grid-column: 1 / span 12;
+  background-color: white;
+  width: 100%;
+  height: 70vh;
+  overflow-y: hidden;
+  max-height: 100vh;
+}
+
+.productImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.productInfo {
+  grid-column: span 12;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  height: initial;
+  justify-content: center;
+  position: initial;
+  margin: 0 var(--marginDesktop) 100px var(--marginDesktop);
+}
+
+.productInfo-description {
+  width: 75%;
+}
+
+.productInfo-addproduct {
+  display: flex;
+  gap: var(--marginDesktop);
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 /*Contacts*/
@@ -836,9 +1004,6 @@ form {
   margin-bottom: 0px;
 }
 
-.gridTemplate-line {
-  margin-bottom: 25px;
-}
 
 .gridTemplate {
   margin-top: 50px;
@@ -851,6 +1016,56 @@ form {
 .gridTemplate-products{
   grid-column: 1 / span 12;
 }
+
+/*Sobre*/
+.imageAbout1-container {
+  grid-column: span 10;
+}
+
+.imageAbout1-container {
+  grid-column: 1 / span 10;
+  height: fit-content; 
+}
+
+.imageAbout1-container p{
+  width: 100%;
+  margin-top: var(--marginDesktop) !important;
+}
+
+.imageAbout1{
+display: flex;
+width: 100%;
+}
+
+.imageAbout1 img{
+}
+
+.imageAbout2-container {
+  grid-column: 3 / span 10;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.textAbout {
+  grid-column: 1 / span 12;
+  margin: 50px 0 100px 0;
+}
+
+.aboutSection-container .h2 {
+  padding: calc(var(--marginDesktop) / 2) 0;
+}
+
+.aboutSection-p {
+  width: 100%;
+}
+
+.aboutSection:last-child {
+  margin-bottom: 100px;
+}
+
+
 
 /*Footer*/
 .footer-container1{
