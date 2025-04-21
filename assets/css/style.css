@@ -2,7 +2,7 @@
 
 :root {
   --bg-color: #F1F1F1;
-  --black: #2D4257;
+  --black: black;
   --secundColor: #2D4257;
 
   --marginDesktop: 20px;
@@ -29,7 +29,7 @@ body {
 }
 
 p {
-  font-size: 17px;
+  font-size: 18px;
   font-family: "neue-haas-grotesk-text", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -387,6 +387,10 @@ header hr {
   margin-bottom: 0.5rem;
 }
 
+.mainStore .gridTemplate-products{
+  grid-column: 4 / span 9!important;
+}
+
 .gridTemplate-products{
   grid-column: 1 / span 9!important;
   display: grid;
@@ -584,9 +588,11 @@ form textarea{
 }
 
 .imageAbout1-container p{
+  text-indent: 50px;
+  font-weight: bold;
   margin-bottom: var(--marginDesktop);
 
-  font-size: 23px;
+  font-size: 25px;
   font-family: "neue-haas-grotesk-text", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -625,12 +631,14 @@ form textarea{
 }
 
 .textAbout{
-  grid-column: 8 / span 5;
+  grid-column: 4 / span 9;
   margin:200px 0;
+
 }
 
 .textAbout p{
-  font-size: 19px;
+  font-size: 25px;
+  text-indent: 50px;
   font-family: "neue-haas-grotesk-text", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -775,6 +783,10 @@ p {
 
 
 /*Header*/
+.menuMobile{
+  display: block;
+}
+
 .menuMobile {
   height: calc(100vh - (35px + var(--marginDesktop) * 2));
   background-color: var(--black);
