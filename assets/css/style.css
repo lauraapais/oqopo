@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 :root {
-  --bg-color: #F1F1F1;
+  --bg-color: white;
   --black: black;
-  --secundColor: #2D4257;
+  --secundColor: black;
 
   --marginDesktop: 20px;
   --marginMobile: 20px;
@@ -30,6 +30,7 @@ body {
 
 p {
   font-size: 18px;
+  line-height: 25px;
   font-family: "neue-haas-grotesk-text", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -38,6 +39,7 @@ p {
 
 .h1 {
   font-size: 35px;
+  line-height: 42px;
   font-family: "neue-haas-grotesk-text", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -46,6 +48,7 @@ p {
 
 h1 {
   font-size: 30px;
+  line-height: 37px;
   font-family: "neue-haas-grotesk-text", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -54,6 +57,7 @@ h1 {
 
 .h2 {
   font-size: 25px;
+  line-height: 32px;
   font-family: "neue-haas-grotesk-text", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -62,6 +66,7 @@ h1 {
 
 .h3 {
   font-size: 19px;
+  line-height: 26px;
   font-family: "neue-haas-grotesk-text", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -70,6 +75,7 @@ h1 {
 
 header p , footer p{
   font-size: 16px;
+  line-height: 21px;
 }
 
 hr{
@@ -197,10 +203,10 @@ header hr {
 .heroIndex {
   aspect-ratio: 16 / 9;
     width: calc(100% - var(--marginDesktop) * 2);
-    height: calc(100vh - (35px + var(--marginDesktop) * 4));
+    height: calc(100vh - (35px + var(--marginDesktop) * 2));
   position: relative;
   overflow: hidden;
-  margin: var(--marginDesktop);
+  margin: 0 var(--marginDesktop);
   
 }
 
@@ -353,6 +359,10 @@ header hr {
   justify-content: space-between;
   padding: 0.5rem 0;
   align-items: center;
+}
+
+.filterFlex svg{
+  width: 13px;
 }
 
 .gridTemplate{
