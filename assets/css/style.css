@@ -95,6 +95,8 @@ header {
   margin: 0 !important;
   row-gap: 0 !important;
   width: 100% !important;
+  
+  justify-items: center;
 }
 
 .mobileMenu{
@@ -116,8 +118,8 @@ header *{
 }
 
 .headerDiv1-container {
-  grid-column: 1 / span 1;
-  margin: var(--marginDesktop) 0 var(--marginDesktop) var(--marginDesktop);
+  grid-column: 1 / span 12;
+  margin: var(--marginDesktop) 0 var(--marginDesktop) 0;
 }
 
 .headerDiv2-container {
