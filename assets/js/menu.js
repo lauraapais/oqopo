@@ -1,20 +1,33 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const mobileMenu = document.querySelector(".mobileMenu");
-    const menuMobile = document.querySelector(".menuMobile");
-    const header = document.querySelector("header");
-    const svgStroke = document.querySelector(".cls-1");
+document.addEventListener('DOMContentLoaded', function() {
+    const menuOpen = document.getElementById('menuOpen');
+    const menuMobile = document.getElementById('menuMobile');
+    let isMenuOpen = false;
 
-    mobileMenu.addEventListener("click", () => {
-        menuMobile.classList.toggle("active"); // Toggle menu visibility
+    // Initialize menu state (closed)
+    menuMobile.style.opacity = '0';
+    menuMobile.style.pointerEvents = 'none';
+    menuMobile.style.visibility = 'hidden';
 
-        if (menuMobile.classList.contains("active")) {
-            header.classList.add("menu-open");
-            svgStroke.style.stroke = "#527ea1"; // Change SVG stroke color
-            document.body.style.overflow = "hidden"; // Lock scroll
+    menuOpen.addEventListener('click', function() {
+        isMenuOpen = !isMenuOpen; // Toggle state
+
+        if (isMenuOpen) {
+            // Open menu
+            menuMobile.style.visibility = 'visible';
+            menuMobile.style.pointerEvents = 'auto';
+            menuMobile.style.opacity = '1';
+            menuOpen.textContent = 'Fechar';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
         } else {
-            header.classList.remove("menu-open");
-            svgStroke.style.stroke = "#000"; // Restore stroke color
-            document.body.style.overflow = "auto"; // Unlock scroll
+            // Close menu
+            menuMobile.style.opacity = '0';
+            menuMobile.style.pointerEvents = 'none';
+            // Wait for transition to complete before hiding
+            setTimeout(() => {
+                menuMobile.style.visibility = 'hidden';
+            }, 300); // Match this with your CSS transition duration
+            menuOpen.textContent = 'Menu';
+            document.body.style.overflow = ''; // Re-enable scrolling
         }
     });
 });
